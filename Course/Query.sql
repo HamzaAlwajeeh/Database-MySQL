@@ -165,6 +165,16 @@ where Salary is not null;
 select * 
 from Salaries;
 
+----------------------------
+---Insert into Select From--
+
+insert into Salaries
+Select ID,firstName,salary
+From Employees
+Where salary is null;
+
+select * 
+from Salaries;
 
 
 
