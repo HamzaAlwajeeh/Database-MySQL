@@ -1,5 +1,5 @@
 -----Create Database-----
-Create database H2;
+Create database H1;
 
 IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'H3')
 BEGIN
@@ -7,7 +7,7 @@ BEGIN
 END
 --------------------------
 -----Drop Database--------
-DROP database H3;
+DROP database H1;
 
 IF EXISTS(SELECT * FROM sys.databases where name = 'H2')
 BEGIN 
@@ -20,12 +20,12 @@ use H1;
 -----Create Table-----------
 USE H1;
 
-CREATE TABLE Users(
+CREATE TABLE Employees(
 ID int NOT NULL,
 firstName nvarchar(10) NOT NULL,
 lastName nvarchar(10) NOT NULL,
 phone varchar(10) NOT NULL,
-email varchar(20),
+salary int,
 );
 
 if NOT EXISTS(Select * from sys.tables where name = 'Employees')
@@ -95,7 +95,30 @@ Restore database car
 From disk = 'E:\Database Course\Backup\car.bak'
 
 ----------------------------
------Restore Database-------
+-----Insert Into------------
+use H1;
+
+--One Record--
+INSERT INTO Employees
+values
+(1 , 'Hamza' , 'Alwajeeh' , '1234' , 5000);
+select * from Employees;
+
+--multi Records--
+INSERT INTO Employees
+values
+(2 , 'Ali' , 'Ahmed' , '1234' , 2000),
+(3 , 'Ahmed' , 'Naser' , '1234' , 2500),
+(4 , 'Rami' , 'Abdo' , '1234' , 4000);
+select * from Employees;
+
+--insert someinfo--
+INSERT INTO Employees (ID , firstName , lastName , phone)
+values
+(2 , 'Ali' , 'Ahmed' , '1234' ),
+(3 , 'Ahmed' , 'Naser' , '1234' ),
+(4 , 'Rami' , 'Abdo' , '1234');
+select * from Employees;
 
 
 
