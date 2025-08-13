@@ -115,10 +115,28 @@ select * from Employees;
 --insert someinfo--
 INSERT INTO Employees (ID , firstName , lastName , phone)
 values
-(2 , 'Ali' , 'Ahmed' , '1234' ),
-(3 , 'Ahmed' , 'Naser' , '1234' ),
-(4 , 'Rami' , 'Abdo' , '1234');
+(5 , 'Ali' , 'Ahmed' , '1234' ),
+(6 , 'Ahmed' , 'Naser' , '1234' ),
+(7 , 'Rami' , 'Abdo' , '1234');
 select * from Employees;
+
+----------------------------
+-----Update Into------------
+
+update Employees
+SET firstName = 'Mohammed'
+WHERE ID = 5;
+
+select * from Employees;
+
+update Employees
+set salary = salary + 300
+where salary <= 4000;
+
+update Employees
+set salary = 1500
+where salary is null;
+
 
 
 
