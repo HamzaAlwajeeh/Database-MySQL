@@ -177,6 +177,46 @@ select *
 from Salaries;
 
 
+-------------
+---practise--
+--Select into and Insert into..Select From :
+--áÏíäÇ ÌÏæá ááØáÇÈ Ýíå ÏÑÌÇÊåã ÇÝÕá ÇáØáÇÈ ÇáããÊÇÒíä Ýí ÌÏæá ÌÏíÏ áæÍÏå æÇÖÝ ÇáÑÇÓÈíä Ýí ÌÏæá ãæÌæÏ
+
+Create Table Students(
+student_ID int identity(1 , 1) Primary Key,
+Name nvarchar(50) not null,
+Age tinyint null,
+Grade decimal not null,
+);
+
+insert into Students
+Values
+('Hamza' ,21 , 97.8),
+('Ali' ,20 , 95.2),
+('Mohammed' ,21 , 71.5),
+('Naser' ,23 , 49),
+('Nader' ,21 , 47.6);
+
+select * from Students;
+
+--select into--
+Select student_ID , Name , Grade
+Into ExllentStudents
+From Students
+Where Grade >= 90;
+
+select * From ExllentStudents;
+
+--insert into..select from--
+insert into FailureStudents
+Select  Name , Age , Grade
+From Students
+Where Grade < 50;
+
+select * From FailureStudents;
+------------------------------
+
+
 
 
 
