@@ -148,6 +148,24 @@ select * from Employees;
 --delete all records--
 Delete from Employees;
 
+----------------------------
+-----Select Into Statment---
+
+Select * 
+into EmployeesCopy1
+from Employees
+
+select * from EmployeesCopy1;
+
+Select ID,firstName,Salary
+into Salaries
+from Employees
+where Salary is not null;
+
+select * 
+from Salaries;
+
+
 
 
 
