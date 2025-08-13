@@ -121,7 +121,7 @@ values
 select * from Employees;
 
 ----------------------------
------Update Into------------
+-----Update Set-------------
 
 update Employees
 SET firstName = 'Mohammed'
@@ -134,8 +134,19 @@ set salary = salary + 300
 where salary <= 4000;
 
 update Employees
-set salary = 1500
+set salary = null
+where salary =1500;
+
+----------------------------
+-----Delete from------------
+
+Delete from Employees
 where salary is null;
+
+select * from Employees;
+
+--delete all records--
+Delete from Employees;
 
 
 
