@@ -326,3 +326,36 @@ Order By MonthlySalary ASC;
 Select FirstName ,DepartmentID, MonthlySalary from Employees
 Where DepartmentID = 1
 Order By FirstName;
+
+------------------------------
+-----Select Top Statment------
+
+Select Top 10 *  From Employees; -- 10 records
+
+Select Top 10 percent * From Employees; -- 5%
+
+Select Top 3 MonthlySalary From Employees
+Order by MonthlySalary Desc; -- ãÚ ÇáÊßÑÇÑ
+
+Select distinct Top 3 MonthlySalary From Employees
+Order by MonthlySalary Desc; -- ÈÏæä ÊßÑÇÑ
+
+
+-- Fetch Employees That Have Top 3 Monthly Salary --
+
+SELECT ID , FirstName , LastName , DepartmentID , MonthlySalary
+From Employees
+Where MonthlySalary in (
+	SELECT Distinct TOP 3 MonthlySalary From Employees
+	ORDER BY MonthlySalary Desc
+)
+ORDER BY MonthlySalary Desc;
+
+-- Fetch Employees That Have Less 3 Monthly Salary --
+SELECT ID , FirstName , LastName , DepartmentID , MonthlySalary
+From Employees
+WHERE MonthlySalary in (
+	SELECT Distinct Top 3 MonthlySalary From Employees
+	Order By MonthlySalary ASC
+)
+ORDER BY MonthlySalary ASC;
