@@ -295,3 +295,20 @@ Where ExitDate is NOT Null;
 -- <> => (Not Equal == !=)
 Select * from Employees
 Where Gender <> 'F'; -- Will Give All Male Employees
+
+--[6] Where , (IN , NOT IN) --
+
+--Select * From Employees
+--Where DepartmentID = 1 or DepartmentID = 3 or DepartmentID = 5;
+
+Select * From Employees
+Where DepartmentID in (1 , 3 , 5);
+
+SELECT * FROM Employees
+WHERE FirstName in ('Omar' , 'Ali' , 'Sara');
+
+Select Name From Departments
+Where ID in (Select Distinct DepartmentID From Employees Where MonthlySalary = 2500 );
+
+Select Name From Departments
+Where ID Not in (Select Distinct DepartmentID From Employees Where MonthlySalary = 2500 );
