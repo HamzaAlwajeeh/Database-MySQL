@@ -292,6 +292,6 @@ Select * from Employees
 Where ExitDate is NOT Null;
 
 --[6] Where , <> --
--- <> => Reverse The Condition == Not Equal
+-- <> => (Not Equal == !=)
 Select * from Employees
 Where Gender <> 'F'; -- Will Give All Male Employees
