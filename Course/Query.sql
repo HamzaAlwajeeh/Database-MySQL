@@ -388,4 +388,12 @@ Select Todaty = getDate();
 --Get Age--
 Select Age = DATEDIFF(Year , DateBirth , GETDATE()) From Employees;
 
-
+--Get Employees's (ID - FullName - Department - Age - YearlySalary - BonusAmount) --
+SELECT 
+	ID, 
+	FullName = (FirstName + ' ' + LastName), 
+	DepartmentID , Age = (DATEDIFF(YEAR , DateBirth , GETDATE())), 
+	YearlySalary = (MonthlySalary * 12),
+	BonusAmount = MonthlySalary * BonusPerc
+FROM Employees
+ORDER BY YearlySalary Desc;
