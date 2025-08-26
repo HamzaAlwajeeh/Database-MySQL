@@ -376,4 +376,8 @@ Where DepartmentID = 1;
 --Get Full Name--
 Select FullName = FirstName + ' ' + LastName From Employees;
 
+--Get Yearly Salary--
+Select MonthlySalary * 12 AS YearlySalary
+From Employees
+Order By YearlySalary Desc;
 
