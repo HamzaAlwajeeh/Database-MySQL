@@ -381,3 +381,8 @@ Select MonthlySalary * 12 AS YearlySalary
 From Employees
 Order By YearlySalary Desc;
 
+
+--Get Date Today--
+Select Todaty = getDate();
+
+
