@@ -397,3 +397,18 @@ SELECT
 	BonusAmount = MonthlySalary * BonusPerc
 FROM Employees
 ORDER BY YearlySalary Desc;
+
+
+------------------------------
+-----Between Operator---------
+Use HR_Database;
+GO
+Select * From Employees
+Where MonthlySalary >= 1500 and MonthlySalary <= 2000
+order by MonthlySalary desc;
+
+SELECT * FROM Employees
+WHERE MonthlySalary BETWEEN 1500 AND 2000
+ORDER BY MonthlySalary DESC;
+
+
