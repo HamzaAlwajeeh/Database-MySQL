@@ -359,3 +359,21 @@ WHERE MonthlySalary in (
 	Order By MonthlySalary ASC
 )
 ORDER BY MonthlySalary ASC;
+
+
+------------------------------
+-----Select AS Statment-------
+
+Select A = 5 * 2 , B = 4 + 5;
+
+Select ID , FirstName + ' ' + LastName as FullName
+From Employees
+
+Select ID , FullName = FirstName + ' ' + LastName , MonthlySalary
+From Employees
+Where DepartmentID = 1;
+
+--Get Full Name--
+Select FullName = FirstName + ' ' + LastName From Employees;
+
+
