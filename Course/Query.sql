@@ -385,4 +385,7 @@ Order By YearlySalary Desc;
 --Get Date Today--
 Select Todaty = getDate();
 
+--Get Age--
+Select Age = DATEDIFF(Year , DateBirth , GETDATE()) From Employees;
+
 
