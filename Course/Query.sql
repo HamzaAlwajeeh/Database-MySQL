@@ -312,3 +312,17 @@ Where ID in (Select Distinct DepartmentID From Employees Where MonthlySalary = 2
 
 Select Name From Departments
 Where ID Not in (Select Distinct DepartmentID From Employees Where MonthlySalary = 2500 );
+
+------------------------------
+-----Order By Statment--------
+use HR_Database;
+Go
+Select * From Employees
+Order By FirstName;
+
+Select FirstName , MonthlySalary from Employees
+Order By MonthlySalary ASC;
+
+Select FirstName ,DepartmentID, MonthlySalary from Employees
+Where DepartmentID = 1
+Order By FirstName;
