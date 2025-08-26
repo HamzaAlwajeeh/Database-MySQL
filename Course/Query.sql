@@ -191,7 +191,6 @@ Grade decimal not null,
 
 insert into Students
 Values
-('Hamza' ,21 , 97.8),
 ('Ali' ,20 , 95.2),
 ('Mohammed' ,21 , 71.5),
 ('Naser' ,23 , 49),
@@ -215,16 +214,84 @@ Where Grade < 50;
 
 select * From FailureStudents;
 ------------------------------
+-----Identity Feild-----------
+use H1;
+
+create Table Dept(
+ID int Identity(1 , 1) not null,
+DeptName varchar(12) not null,
+Primary key(ID),
+);
+
+create Table Users(
+ID int Identity(1 , 1) not null,
+Name nvarchar(30) not null,
+salary int,
+Dept_ID int References Dept(ID),
+);
+
+select * from Dept;
+select * from Users2;
+
+Alter Table Users2
+Add Dept_ID int ;
+
+ALter Table Users2
+Add Foreign Key(Dept_ID) References Dept(ID);
 
 
+------------------------------
+-----Trancate Statement-------
+--Delete all records and restart Identity
+use H1;
+Truncate Table Users;
 
+select * from Users;
 
+------------------------------
+-----Queries Statement--------
+Use HR_Database;
+Go
+--Get All info--
+SELECT * FROM Employees;
+SELECT Employees.* From Employees;
+SELECT * FROM Departments;
 
+--Get Some info--
+SELECT ID , FirstName , LastName , Gender
+From Employees;
 
+--Get By Distinct--
+SELECT DISTINCT FirstName
+From Employees;
 
+SELECT DISTINCT FirstName,DepartmentID
+From Employees;
 
+--Get By Conditions--
+--[1] Where --
+USE HR_Database;
 
+Select * from Employees
+Where MonthlySalary < 1500
 
+--[2] Where , AND --
+Select * from Employees
+Where MonthlySalary < 1500 AND Gender = 'F';
 
-	
+--[3] Where , OR --
+Select * from Employees
+Where DepartmentID = 1 OR DepartmentID = 2;
 
+--[4] Where , IS --
+Select * from Employees
+Where ExitDate is Null;
+
+--[5] Where , IS NOT --
+Select * from Employees
+Where ExitDate is NOT Null;
+
+--[6] Where , <> --
+-- <> => Reverse The Condition == Not Equal
+Select * from Employees
+Where Gender <> 'F'; -- Will Give All Male Employees
