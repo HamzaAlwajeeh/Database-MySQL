@@ -557,3 +557,21 @@ Select * From Employees;
 --Finds any values that start with "a" or "b"
 	SELECT ID,FirstName FROM Employees
 	WHERE FirstName LIKE 'a%' or FirstName Like 'b';
+
+
+------------------------------
+----------Wild Cards----------
+
+--Execute these satatements to update data
+update  Employees
+Set FirstName = 'Ahmed'
+where ID = 40;
+
+update  Employees
+Set FirstName = 'Ahmad'
+where ID = 30;
+------------------------
+
+Select ID , FirstName From Employees
+Where FirstName = 'Ahmed' or FirstName = 'Ahmad';
+
