@@ -609,10 +609,12 @@ Where FirstName = 'Ahmed' or FirstName = 'Ahmad';
 	WHERE FirstName LIKE '[ST]_____'
 -----------------------
 --[3] Last names where the second letter is a, and it ends with n
-	SELECT FirstName FROM Employees
-	WHERE FirstName LIKE '_a%n'
+	SELECT LastName FROM Employees
+	WHERE LastName LIKE '_a%n'
 -----------------------
 --[4] Last names that Start with 'M', and the second letter is a vowel
+	SELECT LastName FROM Employees
+	WHERE LastName LIKE 'M[aeiou]%'
 -----------------------
 
 
