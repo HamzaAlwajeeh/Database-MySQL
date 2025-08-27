@@ -421,3 +421,24 @@ SELECT
 FROM Employees
 WHERE DATEDIFF(Year , DateBirth , GetDate()) BETWEEN 22 AND 30
 ORDER BY Age;
+
+------------------------------
+--------Functions-------------
+
+SELECT
+	TotalCount = COUNT(MonthlySalary),
+	TotalSum = SUM(MonthlySalary),
+	Avarage = AVG(MonthlySalary),
+	MinSalary = MIN(MonthlySalary),
+	MaxSalary = MAX(MonthlySalary)
+FROM Employees;
+
+--Get Total Employees--
+SELECT TotalEmployees = COUNT(ID) FROM Employees;
+
+--Get Resigned Employees--
+SELECT ResignedEmployees = COUNT(ExitDate) FROM Employees;
+
+--Get Exsist Employees--
+SELECT ExsistEmployees = COUNT(ID) FROM Employees
+WHERE ExitDate is NULL;
