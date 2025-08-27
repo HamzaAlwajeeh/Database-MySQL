@@ -602,7 +602,7 @@ Where FirstName = 'Ahmed' or FirstName = 'Ahmad';
 -----------------------
 --[1] first name Is exactly 5 characters long, ends with a vowel
 	SELECT FirstName FROM Employees
-	WHERE FirstName LIKE '____a'
+	WHERE FirstName LIKE '____[aeiou]'
 -----------------------
 --[2] First names that Begin with S or T, and have 6 total letters
 	SELECT FirstName FROM Employees
