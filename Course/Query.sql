@@ -591,4 +591,11 @@ Where FirstName = 'Ahmed' or FirstName = 'Ahmad';
 	Select FirstName , LastName From Employees
 	Where FirstName Like '[abc]%'
 	Order By FirstName;
+---------------------------------------
+-- search for all employees that their first name start with any letter from a to h
+	Select FirstName , LastName From Employees
+	Where FirstName Like '[a-h]%'
+	Order By FirstName;
+---------------------------------------
+
 	
