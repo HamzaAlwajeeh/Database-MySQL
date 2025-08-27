@@ -581,3 +581,14 @@ Where FirstName = 'Ahmed' or FirstName = 'Ahmad';
 --You can use Not 
 	Select FirstName , LastName From Employees
 	Where FirstName Not Like 'Ahm[ea]d';
+---------------------------------------
+-- search for all employees that their first name start with a or b or c
+--Normal Way
+	Select FirstName , LastName From Employees
+	Where FirstName Like 'a%' or FirstName like 'b%' or FirstName like 'c%'
+	Order By FirstName;
+--Using Wild Cards
+	Select FirstName , LastName From Employees
+	Where FirstName Like '[abc]%'
+	Order By FirstName;
+	
