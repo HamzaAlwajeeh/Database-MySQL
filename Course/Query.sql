@@ -411,4 +411,13 @@ SELECT * FROM Employees
 WHERE MonthlySalary BETWEEN 1500 AND 2000
 ORDER BY MonthlySalary DESC;
 
-
+-- Fetch all employees that have age between 22 and 30--
+SELECT 
+	ID,
+	FullName = FirstName + ' ' + LastName,
+	Gender,
+	Age = DATEDIFF(YEAR , DateBirth , GETDATE()),
+	MonthlySalary
+FROM Employees
+WHERE DATEDIFF(Year , DateBirth , GetDate()) BETWEEN 22 AND 30
+ORDER BY Age;
