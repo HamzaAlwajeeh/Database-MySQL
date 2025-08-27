@@ -575,3 +575,9 @@ where ID = 30;
 Select ID , FirstName From Employees
 Where FirstName = 'Ahmed' or FirstName = 'Ahmad';
 
+-- will search form Ahmed or Ahmad
+	Select FirstName , LastName From Employees
+	Where FirstName Like 'Ahm[ea]d';
+--You can use Not 
+	Select FirstName , LastName From Employees
+	Where FirstName Not Like 'Ahm[ea]d';
