@@ -503,5 +503,16 @@ Select * From(
 )Query1
 Where Query1.TotalCount < 10;
 
+--Get Age Between 22 - 30 Using Sub Query--
+Select * From (
+	Select
+		ID,
+		FullName = FirstName + ' ' + LastName,
+		DepartmentID,
+		Age = DATEDIFF(Year , DateBirth , getDate())
+	From Employees
+)Q2
+Where Q2.Age Between 22 AND 30
+Order By Q2.Age;
 
 
