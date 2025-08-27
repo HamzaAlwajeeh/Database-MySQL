@@ -442,3 +442,27 @@ SELECT ResignedEmployees = COUNT(ExitDate) FROM Employees;
 --Get Exsist Employees--
 SELECT ExsistEmployees = COUNT(ID) FROM Employees
 WHERE ExitDate is NULL;
+
+
+------------------------------
+----------Group By------------
+SELECT
+	TotalCount = COUNT(MonthlySalary),
+	TotalSum = SUM(MonthlySalary),
+	Avarage = AVG(MonthlySalary),
+	MinSalary = MIN(MonthlySalary),
+	MaxSalary = MAX(MonthlySalary)
+FROM Employees
+WHERE DepartmentID = 2;
+
+--With Group by--
+SELECT
+	DepartmentID,
+	TotalCount = COUNT(MonthlySalary),
+	TotalSum = SUM(MonthlySalary),
+	Avarage = AVG(MonthlySalary),
+	MinSalary = MIN(MonthlySalary),
+	MaxSalary = MAX(MonthlySalary)
+FROM Employees
+Group By DepartmentID;
+
