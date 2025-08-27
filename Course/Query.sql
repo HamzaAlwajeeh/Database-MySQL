@@ -466,3 +466,27 @@ SELECT
 FROM Employees
 Group By DepartmentID;
 
+
+------------------------------
+--------Having Statmet--------
+
+-- Having is a Filteration for Group by --
+-- 
+	--its like where statment 
+	--but where can notused with Group by
+--
+
+--Select where total count of department < 10
+SELECT
+	DepartmentID,
+	TotalCount = COUNT(MonthlySalary),
+	TotalSum = SUM(MonthlySalary),
+	Avarage = AVG(MonthlySalary),
+	MinSalary = MIN(MonthlySalary),
+	MaxSalary = MAX(MonthlySalary)
+FROM Employees
+Group By DepartmentID
+Having COUNT(MonthlySalary) < 10;
+
+
+
