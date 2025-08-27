@@ -605,6 +605,8 @@ Where FirstName = 'Ahmed' or FirstName = 'Ahmad';
 	WHERE FirstName LIKE '____a'
 -----------------------
 --[2] First names that Begin with S or T, and have 6 total letters
+	SELECT FirstName FROM Employees
+	WHERE FirstName LIKE '[ST]_____'
 -----------------------
 --[3] Last names where the second letter is a, and it ends with n
 -----------------------
