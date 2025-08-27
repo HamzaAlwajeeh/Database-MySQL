@@ -618,3 +618,23 @@ Where FirstName = 'Ahmed' or FirstName = 'Ahmad';
 -----------------------
 
 
+------------------------------
+-------Create Database--------
+
+CREATE DATABASE Shop_Database;
+Use Shop_Database;
+GO
+
+Create Table Customers(
+CustomerID int not null,
+Name nvarchar(50) not null
+Primary Key(CustomerID)
+);
+
+Create Table Orders(
+OrderID int not null,
+Amount int not null,
+Customer_ID int,
+Primary Key(OrderID),
+Foreign Key(Customer_ID) References Customers(CustomerID)
+);
