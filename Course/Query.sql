@@ -489,4 +489,19 @@ Group By DepartmentID
 Having COUNT(MonthlySalary) < 10;
 
 
+--If you don’t want to use HAVING, you can use WHERE with GROUP BY like this: --
+Select * From(
+	SELECT 
+		DepartmentID,
+		TotalCount = Count(ID),
+		TotalSum = Sum(MonthlySalary),
+		Avarage = Avg(MonthlySalary),
+		MinSalary = Min(MonthlySalary),
+		MaxSalary = Max(MonthlySalary)
+	From Employees
+	Group By DepartmentID
+)Query1
+Where Query1.TotalCount < 10;
+
+
 
