@@ -503,6 +503,7 @@ Select * From(
 )Query1
 Where Query1.TotalCount < 10;
 
+
 --Get Age Between 22 - 30 Using Sub Query--
 Select * From (
 	Select
@@ -516,3 +517,43 @@ Where Q2.Age Between 22 AND 30
 Order By Q2.Age;
 
 
+------------------------------
+---------Like Statmet---------
+
+Select * From Employees;
+
+--Finds any values that start with "a"
+	SELECT ID,FirstName FROM Employees
+	WHERE FirstName LIKE 'a%'
+
+--Finds any values that end with "a"
+	SELECT ID,FirstName FROM Employees
+	WHERE FirstName LIKE '%a'
+
+--Finds any values that have "na" in any position
+	SELECT ID,FirstName FROM Employees
+	WHERE FirstName LIKE '%na%'
+
+--Finds any values that start with "a" and ends with "a"
+	SELECT ID,FirstName FROM Employees
+	WHERE FirstName LIKE 'a%a'
+
+--Finds any values that have "a" in the second position
+	SELECT ID,FirstName FROM Employees
+	WHERE FirstName LIKE '_a%'
+
+--Finds any values that have "a" in the third position
+	SELECT ID,FirstName FROM Employees
+	WHERE FirstName LIKE '__a%'
+
+--Finds any values that start with "a" and are at least 3 characters in length
+	SELECT ID,FirstName FROM Employees
+	WHERE FirstName LIKE 'a__%'
+
+--Finds any values that start with "a" and are at least 4 characters in length
+	SELECT ID,FirstName FROM Employees
+	WHERE FirstName LIKE 'a___%'
+
+--Finds any values that start with "a" or "b"
+	SELECT ID,FirstName FROM Employees
+	WHERE FirstName LIKE 'a%' or FirstName Like 'b';
