@@ -596,6 +596,19 @@ Where FirstName = 'Ahmed' or FirstName = 'Ahmad';
 	Select FirstName , LastName From Employees
 	Where FirstName Like '[a-h]%'
 	Order By FirstName;
----------------------------------------
+-----------------------
+--some exercises
+--Get Employees whose:
+-----------------------
+--[1] first name Is exactly 5 characters long, ends with a vowel
+	SELECT FirstName FROM Employees
+	WHERE FirstName LIKE '____a'
+-----------------------
+--[2] First names that Begin with S or T, and have 6 total letters
+-----------------------
+--[3] Last names where the second letter is a, and it ends with n
+-----------------------
+--[4] Last names that Start with 'M', and the second letter is a vowel
+-----------------------
 
-	
+
