@@ -713,3 +713,10 @@ Left join Orders
 ON Customers.CustomerID = Orders.OrderID
 
 
+SELECT 
+	Customers.CustomerID,
+	Customers.Name,
+	Orders.Amount
+From Customers
+Left outer join Orders
+ON Customers.CustomerID = Orders.OrderID
