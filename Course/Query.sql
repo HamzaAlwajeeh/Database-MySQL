@@ -654,3 +654,17 @@ Values
 (400 , 3),
 (600 , 4);
 Select * From Orders
+
+------------------------------
+---------INNER JOIN-----------
+
+--INNER JOIN OR JOIN--
+Select Customers.CustomerID , Customers.Name , Orders.Amount
+From Customers INNER JOIN Orders 
+ON CustomerID = Customer_ID;
+
+Select Customers.CustomerID , Customers.Name , Orders.Amount
+From Customers JOIN Orders 
+ON CustomerID = Customer_ID;
+
+
