@@ -732,3 +732,11 @@ SELECT
 	Orders.Amount as OrderAmount
 From Customers Right Join Orders
 ON Customers.CustomerID = Orders.Customer_ID
+
+--Right Outer Join
+SELECT        
+	Customers.CustomerID, 
+	Customers.Name, 
+	Orders.Amount AS OrderAmount
+FROM Customers RIGHT OUTER JOIN Orders 
+ON Customers.CustomerID = Orders.Customer_ID
