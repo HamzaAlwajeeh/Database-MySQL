@@ -792,3 +792,6 @@ Select * From ResignedEmployees;
 	SELECT Age = DATEDIFF(Year , DateBirth , getDate()) From Employees;
 	SELECT * FROM getAge;
 --[2] Create View That Calculate Employees Yearly Salary
+	CREATE VIEW YearlySalary As
+	SELECT YearlySalary = MonthlySalary * 12 FROM Employees
+	SELECT * FROM YearlySalary;
