@@ -809,3 +809,39 @@ Select * From ResignedEmployees;
 		From Employees 
 		INNER JOIN Departments ON Employees.DepartmentID = Departments.ID
 		INNER JOIN Countries ON Employees.CountryID = Countries.ID;
+
+
+------------------------------
+-------Exist Statment---------
+
+Use Shop_Database;
+GO
+
+Select * From Customers;
+Select * From Orders;
+----
+Select * From Customers T1
+Where
+	exists
+		(
+		Select * From Orders
+		Where Orders.Customer_ID = T1.CustomerID And Orders.Amount = 400
+		)
+----
+Select 
+	* From Customers AS T1
+where 
+	exists
+	(	
+		Select top 1 * From Orders
+		where Orders.OrderID = T1.CustomerID AND  Orders.Amount = 600
+	)
+----
+Select 
+	* From Customers AS T1
+where 
+	exists
+	(	
+		Select X = 'Yes' From Orders
+		where Orders.OrderID = T1.CustomerID AND  Orders.Amount = 600
+	)
