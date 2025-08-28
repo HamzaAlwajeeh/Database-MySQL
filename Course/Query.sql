@@ -947,4 +947,25 @@ Alter Table Persons
 Drop Constraint PK_Person
 
 ------------------------------
---------Foriegn Key-----------
+--------Foreign Key-----------
+Create Table IDCard(
+ID int Identity(1 , 1) Not Null,
+SerialNumber varchar(20) Not Null,
+--PersonID int FOREIGN KEY REFERENCES Persons(ID)
+--FOREIGN KEY(ID) REFERENCES Persons(ID),
+--CONSTRAINT FK_Person_IDCard FOREIGN KEY(ID) REFERENCES Persons(ID)
+--Or Alter Like The Example bellow:
+)
+
+ALTER TABLE IDCard
+ADD 
+CONSTRAINT PK_IDCard PRIMARY KEY (ID),
+--FOREIGN KEY(ID) REFERENCES Persons(ID)
+CONSTRAINT FK_Person_Card  FOREIGN KEY(ID) REFERENCES Persons(ID);
+
+--To Drop Constraint Use:
+ALTER TABLE IDCard
+DROP CONSTRAINT FK_Person_Card;
+
+------------------------------
+----------NOT NULL------------
