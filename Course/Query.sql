@@ -747,9 +747,18 @@ ON Customers.CustomerID = Orders.Customer_ID
 --Full Join and Full Outer Join are the same.
 --Full Join: gets all data from table Orders and All data from table customers
 
+--Full Join
 SELECT 
 	Customers.CustomerID,
 	Customers.Name,
 	Orders.Amount as OrderAmount
 From Customers Full Join Orders
+ON Customers.CustomerID = Orders.Customer_ID
+
+--Full Outer Join--
+SELECT 
+	Customers.CustomerID,
+	Customers.Name,
+	Orders.Amount as OrderAmount
+From Customers Full Outer Join Orders
 ON Customers.CustomerID = Orders.Customer_ID
