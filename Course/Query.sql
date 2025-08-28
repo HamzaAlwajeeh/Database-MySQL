@@ -894,3 +894,13 @@ Select * From Departments;
 	FROM Employees;
 
 --[2] Check if Employee is Active Or Resigned Using Case Statment
+	SELECT 
+	ID, 
+	FirstName, 
+	LastName,
+	Status = 
+		CASE
+			WHEN ExitDate is Null THEN 'Active'
+			ELSE 'Resigned'
+		END
+	FROM Employees;
