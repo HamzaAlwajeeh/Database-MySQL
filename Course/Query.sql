@@ -626,13 +626,13 @@ Use Shop_Database;
 GO
 
 Create Table Customers(
-CustomerID int not null,
+CustomerID int Identity(1 , 1) not null,
 Name nvarchar(50) not null
 Primary Key(CustomerID)
 );
 
 Create Table Orders(
-OrderID int not null,
+OrderID int Identity(1 , 1) not null,
 Amount int not null,
 Customer_ID int,
 Primary Key(OrderID),
