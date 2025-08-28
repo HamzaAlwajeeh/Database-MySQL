@@ -854,3 +854,16 @@ From Customers INNER JOIN Orders
 ON Customers.CustomerID = Orders.Customer_ID AND Orders.Amount = 600;
 
 
+------------------------------
+-------Union Statment---------
+Use HR_Database;
+GO
+
+Select * From ActiveEmployees;
+Select * From ResignedEmployees;
+
+--Union Must Be in A Same Count Of Columns
+--Distinct Result using Union
+Select * From ActiveEmployees
+Union
+Select * From ResignedEmployees;
