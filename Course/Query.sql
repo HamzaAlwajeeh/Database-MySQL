@@ -921,3 +921,30 @@ Select * From Departments;
 				WHen Gender = 'M' Then MonthlySalary * 1.1
 			End 
 	FROM Employees;
+
+
+------------------------------
+--------Primary Key-----------
+
+CREATE TABLE Persons(
+   ID int NOT NULL,
+   FirstName varchar(255),
+   LastName varchar(255) NOT NULL,
+   Age int,
+   --Can Used:
+   --ID int Not Null Primary Key
+   --PRIMARY KEY (ID)
+   --CONSTRAINT PK_Person PRIMARY KEY (ID,LastName)
+   --Or Alter Like The Example bellow:
+);
+
+Alter Table Persons
+Add Constraint PK_Person Primary Key (ID)
+--Add Primary Key (ID)
+
+--To Drop Constraint Use:
+Alter Table Persons
+Drop Constraint PK_Person
+
+------------------------------
+--------Foriegn Key-----------
