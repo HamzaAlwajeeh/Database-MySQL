@@ -783,3 +783,12 @@ Where ExitDate is not null;
 
 Select * From ResignedEmployees;
 
+
+-----------------------
+--some exercises
+-----------------------
+--[1] Create View That Calculate Employees Age
+	CREATE VIEW getAge AS
+	SELECT Age = DATEDIFF(Year , DateBirth , getDate()) From Employees;
+	SELECT * FROM getAge;
+--[2] Create View That Calculate Employees Yearly Salary
