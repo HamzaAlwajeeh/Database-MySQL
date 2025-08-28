@@ -876,3 +876,21 @@ Select * From Departments;
 Select * From Departments
 Union ALL
 Select * From Departments;
+
+
+------------------------------
+--------Case Statment---------
+--[1] Check if Employee is Male Or Female Using Case Statment
+	SELECT 
+	ID, 
+	FirstName, 
+	LastName,
+	GenderType = 
+		CASE
+			WHEN Gender = 'F' THEN 'Female'
+			WHEN Gender = 'M' THEN 'Male'
+			ELSE 'Unknown'
+		END
+	FROM Employees;
+
+--[2] Check if Employee is Active Or Resigned Using Case Statment
