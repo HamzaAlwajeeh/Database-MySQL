@@ -668,3 +668,20 @@ From Customers JOIN Orders
 ON CustomerID = Customer_ID;
 
 
+--some exercises : 
+Use HR_Database;
+Go
+
+Select 
+	Employees.ID, 
+	Employees.FirstName,  
+	Employees.LastName,
+	Employees.MonthlySalary,
+	Departments.Name,
+	Countries.Name
+From Employees
+JOIN Departments
+ON Employees.DepartmentID = Departments.ID
+JOIN Countries
+ON Employees.CountryID = Countries.ID
+
