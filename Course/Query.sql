@@ -845,3 +845,12 @@ where
 		Select X = 'Yes' From Orders
 		where Orders.OrderID = T1.CustomerID AND  Orders.Amount = 600
 	)
+
+Select 
+	Customers.CustomerID,
+	Customers.Name,
+	Orders.Amount As OrderAmount
+From Customers INNER JOIN Orders
+ON Customers.CustomerID = Orders.Customer_ID AND Orders.Amount = 600;
+
+
