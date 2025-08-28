@@ -743,7 +743,7 @@ ON Customers.CustomerID = Orders.Customer_ID
 
 
 ------------------------------
----------FULL JOIN-----------
+---------FULL JOIN------------
 --Full Join and Full Outer Join are the same.
 --Full Join: gets all data from table Orders and All data from table customers
 
@@ -762,3 +762,24 @@ SELECT
 	Orders.Amount as OrderAmount
 From Customers Full Outer Join Orders
 ON Customers.CustomerID = Orders.Customer_ID
+
+
+------------------------------
+-----------Views--------------
+Use HR_Database;
+GO
+
+Select * From Employees;
+
+Create View ActiveEmployees as
+Select * From Employees
+Where ExitDate is null;
+
+Select * From ActiveEmployees
+
+Create View ResignedEmployees as
+Select * From Employees
+Where ExitDate is not null;
+
+Select * From ResignedEmployees;
+
