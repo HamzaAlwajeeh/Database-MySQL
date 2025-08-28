@@ -733,10 +733,23 @@ SELECT
 From Customers Right Join Orders
 ON Customers.CustomerID = Orders.Customer_ID
 
---Right Outer Join
+--Right Outer Join--
 SELECT        
 	Customers.CustomerID, 
 	Customers.Name, 
 	Orders.Amount AS OrderAmount
 FROM Customers RIGHT OUTER JOIN Orders 
+ON Customers.CustomerID = Orders.Customer_ID
+
+
+------------------------------
+---------FULL JOIN-----------
+--Full Join and Full Outer Join are the same.
+--Full Join: gets all data from table Orders and All data from table customers
+
+SELECT 
+	Customers.CustomerID,
+	Customers.Name,
+	Orders.Amount as OrderAmount
+From Customers Full Join Orders
 ON Customers.CustomerID = Orders.Customer_ID
