@@ -969,3 +969,15 @@ DROP CONSTRAINT FK_Person_Card;
 
 ------------------------------
 ----------NOT NULL------------
+
+CREATE TABLE Person2 (
+	--First Way
+   ID int NOT NULL,
+   FirstName varchar(20) NOT NULL,
+   LastName varchar(20) NOT NULL, 
+   Age int,
+);
+--Second Way:
+--Adding Not Null Using Alter:
+ALTER TABLE Person2
+ALTER COLUMN Age int Not Null;
