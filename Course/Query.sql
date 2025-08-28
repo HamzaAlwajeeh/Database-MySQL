@@ -903,4 +903,21 @@ Select * From Departments;
 			WHEN ExitDate is Null THEN 'Active'
 			ELSE 'Resigned'
 		END
+	FROM Employees
+
+--[3] Check if Employee is Male Adding The Salary by 10% Or else by 15% Using Case Statment
+	SELECT 
+		ID,
+		FullName = FirstName + ' ' + Lastname,
+		Gender = 
+			Case
+				When Gender = 'F' Then 'Female'
+				Else 'Male'
+			End,
+		MonthlySalary,
+		NewMonthlySalary = 
+			Case
+				When Gender = 'F' Then MonthlySalary * 1.15
+				WHen Gender = 'M' Then MonthlySalary * 1.1
+			End 
 	FROM Employees;
