@@ -667,7 +667,6 @@ Select Customers.CustomerID , Customers.Name , Orders.Amount
 From Customers JOIN Orders 
 ON CustomerID = Customer_ID;
 
-
 --some exercises : 
 Use HR_Database;
 Go
@@ -677,11 +676,40 @@ Select
 	Employees.FirstName,  
 	Employees.LastName,
 	Employees.MonthlySalary,
-	Departments.Name,
-	Countries.Name
+	Departments.Name as DeptName,
+	CountaryName = Countries.Name
 From Employees
 JOIN Departments
 ON Employees.DepartmentID = Departments.ID
 JOIN Countries
 ON Employees.CountryID = Countries.ID
+WHERE Departments.Name = 'IT';
+
+
+SELECT
+	Employees.ID, 
+	Employees.FirstName, 
+	Employees.LastName, 
+	Employees.Gender, 
+	Departments.Name as DeptName
+FROM Employees 
+INNER JOIN Departments 
+ON Employees.DepartmentID = Departments.ID
+WHERE Gender = 'M'
+
+
+------------------------------
+---------LEFT JOIN------------
+--Left Join and Left Outer Join are the same.
+--Left Join: gets all data from table customers and only matched data from table orders
+Use Shop_Database
+Go
+SELECT 
+	Customers.CustomerID,
+	Customers.Name,
+	Orders.Amount
+From Customers
+Left join Orders
+ON Customers.CustomerID = Orders.OrderID
+
 
