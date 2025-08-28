@@ -638,3 +638,19 @@ Customer_ID int,
 Primary Key(OrderID),
 Foreign Key(Customer_ID) References Customers(CustomerID)
 );
+
+
+Insert Into Customers
+Values
+('Hamza'),
+('Ali'),
+('Mohammed'),
+('Abdullah');
+Select * From Customers;
+
+Insert Into Orders
+Values
+(500 , 1),
+(400 , 3),
+(600 , 4);
+Select * From Orders
