@@ -867,3 +867,12 @@ Select * From ResignedEmployees;
 Select * From ActiveEmployees
 Union
 Select * From ResignedEmployees;
+
+Select * From Departments
+Union 
+Select * From Departments;
+
+--Duplcate Result using Union ALL
+Select * From Departments
+Union ALL
+Select * From Departments;
