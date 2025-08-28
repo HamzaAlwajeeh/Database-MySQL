@@ -795,3 +795,17 @@ Select * From ResignedEmployees;
 	CREATE VIEW YearlySalary As
 	SELECT YearlySalary = MonthlySalary * 12 FROM Employees
 	SELECT * FROM YearlySalary;
+--[3] Create View That Get Active Employees Information
+	CREATE VIEW EmployeesInfo AS
+		SELECT 
+			Employees.ID,
+			Employees.FirstName + ' ' + LastName AS FullName,
+			Employees.Gender,
+			Age = DATEDIFF(YEAR , Employees.DateBirth , GETDATE()),
+			Departments.Name AS DeptName,
+			Countries.Name AS Country,
+			Employees.MonthlySalary,
+			Employees.MonthlySAlary * 12 AS YearlySalary
+		From Employees 
+		INNER JOIN Departments ON Employees.DepartmentID = Departments.ID
+		INNER JOIN Countries ON Employees.CountryID = Countries.ID;
