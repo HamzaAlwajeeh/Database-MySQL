@@ -720,3 +720,15 @@ SELECT
 From Customers
 Left outer join Orders
 ON Customers.CustomerID = Orders.OrderID
+
+
+------------------------------
+---------Right JOIN-----------
+--Right Join and Right Outer Join are the same.
+--Right Join: gets all data from table Orders and only matched data from table customers
+SELECT 
+	Customers.CustomerID,
+	Customers.Name,
+	Orders.Amount as OrderAmount
+From Customers Right Join Orders
+ON Customers.CustomerID = Orders.Customer_ID
