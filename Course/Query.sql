@@ -1067,3 +1067,6 @@ Alter Table Person6
 Add Constraint CHK_Person5
 CHECK((Age Between 18 AND 30) And city = 'Mukalla' );
 
+--Drop Check Constraint
+Alter Table Person6
+Drop Constraint CHK_Person5;
