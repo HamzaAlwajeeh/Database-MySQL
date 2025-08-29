@@ -1052,3 +1052,18 @@ CREATE TABLE Person5 (
    city varchar(20),
    Constraint CHK_Person Check(Age >= 18 And city = 'IBB'),
 );
+
+
+CREATE TABLE Person6 (
+   ID int NOT NULL Primary Key Identity(1,1),
+   Name varchar(20) NOT NULL, 
+   --First Way
+   Age int,
+   city varchar(20),
+);
+
+--Third way Using Alter
+Alter Table Person6
+Add Constraint CHK_Person5
+CHECK((Age Between 18 AND 30) And city = 'Mukalla' );
+
