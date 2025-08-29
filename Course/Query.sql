@@ -1101,3 +1101,11 @@ CREATE TABLE Person9 (
    Constraint uq_Username Unique(UserName)
 );
 
+--Fourth Way Using Alter
+Alter Table Person9
+Add Constraint uq_City
+Unique(city);
+
+--Drop Unique Constraint
+Alter Table Person9
+Drop Constraint uq_City;
