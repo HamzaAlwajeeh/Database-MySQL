@@ -1070,3 +1070,15 @@ CHECK((Age Between 18 AND 30) And city = 'Mukalla' );
 --Drop Check Constraint
 Alter Table Person6
 Drop Constraint CHK_Person5;
+
+
+------------------------------
+-------Unique Constraint------
+
+CREATE TABLE Person7 (
+   ID int NOT NULL Primary Key Identity(1,1),
+   --First Way
+   UserName varchar(20) NOT NULL UNIQUE, 
+   Age int DEFAULT 21,
+   city varchar(20),
+);
