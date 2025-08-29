@@ -1082,3 +1082,12 @@ CREATE TABLE Person7 (
    Age int DEFAULT 21,
    city varchar(20),
 );
+
+CREATE TABLE Person8 (
+   ID int NOT NULL Primary Key Identity(1,1),
+   UserName varchar(20) NOT NULL, 
+   Age int DEFAULT 21,
+   city varchar(20),
+   --Second Way
+   Unique(UserName)
+);
