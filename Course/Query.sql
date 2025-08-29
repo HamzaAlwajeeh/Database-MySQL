@@ -981,3 +981,30 @@ CREATE TABLE Person2 (
 --Adding Not Null Using Alter:
 ALTER TABLE Person2
 ALTER COLUMN Age int Not Null;
+
+
+------------------------------
+------Default Constraint------
+CREATE TABLE Person3 (
+   ID int NOT NULL,
+   FirstName varchar(20) NOT NULL,
+   LastName varchar(20) NOT NULL, 
+   Age int,
+   --First Way
+   ciry varchar(20) DEFAULT 'IBB',
+);
+Select * From Person3;
+
+ALter Table Person3
+Add Constraint PK_Person3 PRIMARY KEY(ID);
+
+CREATE TABLE Orders (
+   ID int IDENTITY(1 , 1) NOT NULL,
+   Name nvarchar(30) NOT NULL,
+   PersonID int, 
+   ciry varchar(20) DEFAULT 'IBB',
+   OrderDate date DEFAULT GETDATE(),
+   PRIMARY KEY(ID),
+   FOREIGN KEY(PersonID) REFERENCES Person3(ID),
+);
+select * from Orders;
