@@ -1034,10 +1034,21 @@ Drop Constraint df_City;
 
 ------------------------------
 -------Check Constraint-------
+--First Way
 CREATE TABLE Person4 (
    ID int NOT NULL Primary Key,
    Name varchar(20) NOT NULL, 
    --First Way
    Age int Check (Age >= 18),
    ciry varchar(20),
+);
+
+--Second Way
+CREATE TABLE Person5 (
+   ID int NOT NULL Primary Key Identity(1,1),
+   Name varchar(20) NOT NULL, 
+   --First Way
+   Age int,
+   city varchar(20),
+   Constraint CHK_Person Check(Age >= 18 And city = 'IBB'),
 );
