@@ -998,6 +998,7 @@ Select * From Person3;
 ALter Table Person3
 Add Constraint PK_Person3 PRIMARY KEY(ID);
 
+--First Way
 CREATE TABLE Orders (
    ID int IDENTITY(1 , 1) NOT NULL,
    Name nvarchar(30) NOT NULL,
@@ -1008,3 +1009,20 @@ CREATE TABLE Orders (
    FOREIGN KEY(PersonID) REFERENCES Person3(ID),
 );
 select * from Orders;
+
+--Second Way
+CREATE TABLE Orders2 (
+   ID int IDENTITY(1 , 1) NOT NULL,
+   Name nvarchar(30) NOT NULL,
+   PersonID int, 
+   city varchar(20),
+   OrderDate date DEFAULT GETDATE(),
+   PRIMARY KEY(ID),
+   FOREIGN KEY(PersonID) REFERENCES Person3(ID),
+);
+select * from Orders;
+
+--second way
+Alter Table Orders2
+Add CONSTRAINT df_City 
+DEFAULT 'Taiz' FOR city;
