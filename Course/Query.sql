@@ -1091,3 +1091,13 @@ CREATE TABLE Person8 (
    --Second Way
    Unique(UserName)
 );
+
+CREATE TABLE Person9 (
+   ID int NOT NULL Primary Key Identity(1,1),
+   UserName varchar(20) NOT NULL, 
+   Age int DEFAULT 21,
+   city varchar(20),
+   --Third Way
+   Constraint uq_Username Unique(UserName)
+);
+
