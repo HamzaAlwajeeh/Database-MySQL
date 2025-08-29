@@ -1110,4 +1110,4 @@ Unique(city);
 Alter Table Person9
 Drop Constraint uq_City;
 
-Drop Table Person7;
+Drop Table Person6;
