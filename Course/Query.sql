@@ -1026,3 +1026,7 @@ select * from Orders;
 Alter Table Orders2
 Add CONSTRAINT df_City 
 DEFAULT 'Taiz' FOR city;
+
+--Drop Default Constraint
+Alter Table Orders2
+Drop Constraint df_City;
