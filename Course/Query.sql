@@ -1030,3 +1030,14 @@ DEFAULT 'Taiz' FOR city;
 --Drop Default Constraint
 Alter Table Orders2
 Drop Constraint df_City;
+
+
+------------------------------
+-------Check Constraint-------
+CREATE TABLE Person4 (
+   ID int NOT NULL Primary Key,
+   Name varchar(20) NOT NULL, 
+   --First Way
+   Age int Check (Age >= 18),
+   ciry varchar(20),
+);
