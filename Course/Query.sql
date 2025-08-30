@@ -1141,5 +1141,7 @@ Drop INDEX Person4.idx_lastName;
 CREATE INDEX idx_Person
 ON Person4(FirstName , LastName);
 
+Drop INDEX Person4.idx_Person;
+
 
 Select * From Person4;
