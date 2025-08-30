@@ -1110,4 +1110,16 @@ Unique(city);
 Alter Table Person9
 Drop Constraint uq_City;
 
-Drop Table Person5;
+Drop Table Person3;
+
+
+------------------------------
+-------Insdex Constraint------
+Use HR_Database;
+GO
+Create Table Person4(
+	ID int identity(1 , 1) Not Null Primary Key,
+	FirstName nvarchar(20) not null,
+	LastName nvarchar(20) not null,
+	Age int
+); 
