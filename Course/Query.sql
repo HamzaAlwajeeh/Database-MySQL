@@ -1127,3 +1127,11 @@ Create Table Person4(
 --‘—Ќ Ё«∆ѕе «б«дѕя” 
 --н÷«ЏЁ ”—Џе «” —ћ«Џ «б»н«д«  жнёбб ”—Џе «б Џѕнб
 -- бё«∆н« «б»—«нгн ян Џбне «”—Џ «дя” жеж(PRIMARY KEY CLUSTERED )
+--ЌнЋ нгяд «б Ќяг »«б — н»  ’«Џѕн« «ж  д«“бн«
+
+--How To Create Index 
+--First Way
+CREATE INDEX idx_lastName
+ON Person4(LastName);
+
+Select * From Person4;
