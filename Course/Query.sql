@@ -1134,4 +1134,6 @@ Create Table Person4(
 CREATE INDEX idx_lastName
 ON Person4(LastName);
 
+Drop INDEX Person4.idx_lastName;
+
 Select * From Person4;
