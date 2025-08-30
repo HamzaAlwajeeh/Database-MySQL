@@ -1123,3 +1123,7 @@ Create Table Person4(
 	LastName nvarchar(20) not null,
 	Age int
 ); 
+
+--‘—Ќ Ё«∆ѕе «б«дѕя” 
+--н÷«ЏЁ ”—Џе «” —ћ«Џ «б»н«д«  жнёбб ”—Џе «б Џѕнб
+-- бё«∆н« «б»—«нгн ян Џбне «”—Џ «дя” жеж(PRIMARY KEY CLUSTERED )
