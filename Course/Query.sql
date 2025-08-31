@@ -1162,6 +1162,11 @@ Select * From Person4;
 --[3] No Repeating Groups : Each Column Should have a distinct name
 
 ------------------------------
----------2st Normal Form------
+---------2nd Normal Form------
 --[1] 1st Normal Form
 --[2] NoneKey Attribute must not dependent on SubKey 
+
+------------------------------
+---------3rd Normal Form------
+--[1] 2nd and 3rd Normal Form
+--[2] no transitive dependences : Each non-key column int the table must be dependent only on the primary key , and not on other non-key column
