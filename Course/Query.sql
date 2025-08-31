@@ -1160,3 +1160,8 @@ Select * From Person4;
 --[1] Each Record Must Have a Unique Primary Key
 --[2] Each Column Must Be Atomic : has a single value , Not Composit
 --[3] No Repeating Groups : Each Column Should have a distinct name
+
+------------------------------
+---------2st Normal Form------
+--[1] 1st Normal Form
+--[2] NoneKey Attribute must not dependent on SubKey 
