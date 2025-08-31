@@ -1169,4 +1169,9 @@ Select * From Person4;
 ------------------------------
 ---------3rd Normal Form------
 --[1] 2nd and 3rd Normal Form
---[2] no transitive dependences : Each non-key column int the table must be dependent only on the primary key , and not on other non-key column
+--[2] no transitive dependences : Each non-key column int the table must be dependent only on the primary key , 
+--		and not on other non-key column
+
+--------------------------------
+--Finish DB Level 1 Successfully
+---------2nd Normal Form--------
