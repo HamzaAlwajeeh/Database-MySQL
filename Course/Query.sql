@@ -1153,3 +1153,10 @@ Select * From Person4;
 --ÚÈÇÑÉ Úä ÚãáíÉ ÊŞÓíã ÇáãÚáæãÇÊ Çáì ÇÌÒÇÁ ÕÛíÑÉ ãä ÇÌá ÊÍŞíŞ ãÇíáí
 --ÊÌäÈ ÊßÑÇÑ ÇáÈíÇäÇÊ ÏÇÎá ÇáÌÏæá
 --ÓáÇãÉ ÇáÈíÇäÇÊ
+
+
+------------------------------
+---------1st Normal Form------
+--[1] Each Record Must Have a Unique Primary Key
+--[2] Each Column Must Be Atomic : has a single value , Not Composit
+--[3] No Repeating Groups : Each Column Should have a distinct name
