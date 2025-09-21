@@ -674,7 +674,7 @@ Go
 Select 
 	Employees.ID, 
 	Employees.FirstName,  
-	Employees.LastName,
+	Employees.LastName
 	Employees.MonthlySalary,
 	Departments.Name as DeptName,
 	CountaryName = Countries.Name
@@ -686,16 +686,7 @@ ON Employees.CountryID = Countries.ID
 WHERE Departments.Name = 'IT';
 
 
-SELECT
-	Employees.ID, 
-	Employees.FirstName, 
-	Employees.LastName, 
-	Employees.Gender, 
-	Departments.Name as DeptName
-FROM Employees 
-INNER JOIN Departments 
-ON Employees.DepartmentID = Departments.ID
-WHERE Gender = 'M'
+`
 
 
 ------------------------------
